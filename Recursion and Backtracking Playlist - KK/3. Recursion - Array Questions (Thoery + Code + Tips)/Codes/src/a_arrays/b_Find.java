@@ -11,6 +11,8 @@ public class b_Find {
         System.out.println(doFindIndexReverse(arr,5,arr.length-1));
         doFindAllIndex(arr,5,0);
         System.out.println(list);
+        System.out.println(doFindAllIndexUsingList(arr,5,0,new ArrayList<>()));
+        System.out.println(doFindAllIndexUsingList2(arr,5,0));
     }
 
     static boolean doFind(int[] arr, int target, int index){
@@ -57,5 +59,33 @@ public class b_Find {
         }
         doFindAllIndex(arr, target, index + 1);
 
+    }
+
+    static ArrayList<Integer> doFindAllIndexUsingList(int[] arr, int target, int index, ArrayList<Integer> list){
+        if (index == arr.length){
+            return list;
+        }
+
+        if(arr[index] == target){
+            list.add(index);
+        }
+        return doFindAllIndexUsingList(arr, target, index + 1, list);
+
+    }
+
+    static ArrayList<Integer> doFindAllIndexUsingList2(int[] arr, int target, int index){
+        ArrayList<Integer> list = new ArrayList<>();
+        if (index == arr.length){
+            return list;
+        }
+
+        if(arr[index] == target){
+            list.add(index);
+        }
+        ArrayList<Integer> ansFromBelowCalls = doFindAllIndexUsingList2(arr, target, index + 1);
+
+        list.addAll(ansFromBelowCalls);
+
+        return list;
     }
 }
