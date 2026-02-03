@@ -4,7 +4,9 @@ import java.util.Random;
 
 public class e_QuickSort {
     public static void main(String[] args) {
-        int[] arr = {4, 6, 2, 5, 7, 9, 1, 3};
+//        int[] arr = {4, 6, 2, 5, 7, 9, 1, 3};
+//        int[] arr = {7, 4 , 1, 5, 3};
+        int[] arr = {5, 4, 4, 1, 1};
         int n = arr.length;
 
         System.out.println("Before Sorting Array: ");
