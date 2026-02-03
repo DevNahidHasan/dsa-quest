@@ -1,5 +1,7 @@
 package algorithms;
 
+import java.util.Random;
+
 public class e_QuickSort {
     public static void main(String[] args) {
         int[] arr = {4, 6, 2, 5, 7, 9, 1, 3};
@@ -38,6 +40,11 @@ public class e_QuickSort {
 
     // Function to partition the array
     public static int partition(int[] arr, int low, int high){
+        // Choosing a random index between low and high
+        int randomIndex = low + new Random().nextInt(high - low + 1);
+        // Swap the random element with the first element
+        swap(arr, low, randomIndex);
+
         int pivot = arr[low];
         int i = low;
         int j = high;
