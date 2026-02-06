@@ -1,6 +1,7 @@
 package algorithms;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class d_MergeSorting {
@@ -10,16 +11,12 @@ public class d_MergeSorting {
         int n = arr.length;
 
         System.out.println("Before Sorting Array: ");
-        for (int i = 0; i < n; i++)
-            System.out.print(arr[i] + " ");
-        System.out.println();
+        System.out.println(Arrays.toString(arr));
 
         int[] sortedArr = mergeSort(arr);
 
         System.out.println("After Sorting Array: ");
-        for (int i = 0; i < n; i++)
-            System.out.print(sortedArr[i] + " ");
-        System.out.println();
+        System.out.println(Arrays.toString(sortedArr));
     }
 
     // Function to perform merge sort on the given array
