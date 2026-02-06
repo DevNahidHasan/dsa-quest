@@ -13,21 +13,21 @@ public class d_MergeSorting {
         System.out.println("Before Sorting Array: ");
         System.out.println(Arrays.toString(arr));
 
-        int[] sortedArr = mergeSort(arr);
+        mergeSort(arr);
 
         System.out.println("After Sorting Array: ");
-        System.out.println(Arrays.toString(sortedArr));
+        System.out.println(Arrays.toString(arr));
     }
 
     // Function to perform merge sort on the given array
-    public static int[] mergeSort(int[] nums) {
+    public static void mergeSort(int[] nums) {
         int n = nums.length; // Size of array
 
         // Perform Merge sort on the whole array
         mergeSortHelper(nums, 0, n - 1);
 
-        // Return the sorted array
-        return nums;
+//        // Return the sorted array
+//        return nums;
     }
 
     static void mergeSortHelper(int[] arr, int low, int high) {
