@@ -1,5 +1,6 @@
 package algorithms;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class e_QuickSort {
@@ -10,34 +11,30 @@ public class e_QuickSort {
         int n = arr.length;
 
         System.out.println("Before Sorting Array: ");
-        for (int num : arr) {
-            System.out.print(num + " ");
-        }
-        System.out.println();
+        System.out.println(Arrays.toString(arr));
 
-        int[] sortedArr = quickSort(arr);
+        quickSort(arr);
 
         System.out.println("After Sorting Array: ");
-        for (int num : sortedArr) {
-            System.out.print(num + " ");
-        }
-        System.out.println();
+        System.out.println(Arrays.toString(arr));
 
     }
 
     // Function to perform quick sort
-    public static int[] quickSort(int[] nums) {
+    public static void quickSort(int[] nums) {
         quickSortHelper(nums, 0, nums.length - 1);
-        return nums;
+//        return nums;
     }
 
     // Helper function to perform recursive quicksort
     public static void quickSortHelper(int[] arr, int low, int high){
-        if ( low < high){
+        if ( low >= high) {
+            return;
+        }
             int pIndex = partition(arr, low, high);
             quickSortHelper(arr, low, pIndex - 1);
             quickSortHelper(arr, pIndex + 1, high);
-        }
+
     }
 
     // Function to partition the array
