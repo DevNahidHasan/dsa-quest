@@ -21,6 +21,8 @@ public class c_FindMissingNumber {
     }
 
     // Optimal II - XOR
+    // XOR of two same numbers is 0.
+    // The XOR of a number with 0 is the number itself
     public static int missingNumber2(int[] nums) {
         int xor1 = 0, xor2 = 0;
 
