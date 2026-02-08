@@ -6,8 +6,10 @@ import java.util.TreeSet;
 
 public class b_RemoveDuplicatesFromSortedArray {
     public static void main(String[] args) {
-        int[] nums = {0, 0, 3, 3, 5, 6};
-        System.out.println(removeDuplicates(nums));
+//        int[] nums = {0, 0, 3, 3, 5, 6};
+        int[] nums = {-2, 2, 4, 4, 4, 4, 5, 5};
+//        System.out.println(removeDuplicates(nums));
+        System.out.println(removeDuplicates2(nums));
         System.out.println(Arrays.toString(nums));
 
     }
@@ -34,5 +36,20 @@ public class b_RemoveDuplicatesFromSortedArray {
 
         // Return the number of unique elements
         return k;
+    }
+
+    //Optimal approach
+    public static int removeDuplicates2(int[] nums){
+        int n = nums.length;
+        int j = 1;
+        int count = 1;
+        for (int i = 1; i < n; i++){
+            if (nums[i] != nums[i-1]){
+                nums[j] = nums[i];
+                j++;
+                count++;
+            }
+        }
+        return count;
     }
 }
