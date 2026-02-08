@@ -16,7 +16,7 @@ public class a_MoveZerosToEnd {
         for (int i = 0; i < nums.length; i++) {
             // If current element is non-zero
             if (nums[i] != 0 ) {
-                if (i == j){//no need to swap
+                if (i == j){//no need to swap, as non-zero at correct place
                     j++;
                     continue;
                 }
