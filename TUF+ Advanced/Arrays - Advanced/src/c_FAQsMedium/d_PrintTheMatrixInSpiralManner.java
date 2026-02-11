@@ -46,6 +46,7 @@ public class d_PrintTheMatrixInSpiralManner {
             right--;
 
             // Traverse from right to left
+            // make sure that is atleast one row available
             if (top <= bottom) {
                 for (int i = right; i >= left; --i) {
                     ans.add(matrix[bottom][i]);
@@ -54,6 +55,7 @@ public class d_PrintTheMatrixInSpiralManner {
             }
 
             // Traverse from bottom to top
+            // make sure that is atleast one column available
             if (left <= right) {
                 for (int i = bottom; i >= top; --i) {
                     ans.add(matrix[i][left]);
