@@ -28,10 +28,17 @@ public class e_PascalsTriangle1 {
 
         int res = 1; // to store the result
 
+//        // Calculate nCr using iterative method avoiding overflow
+//        for (int i = 0; i < r; i++) {
+//            res = res * (n - i);
+//            res = res / (i + 1);
+//        }
+
+        // Simplified the above for loop
         // Calculate nCr using iterative method avoiding overflow
-        for (int i = 0; i < r; i++) {
-            res = res * (n - i);
-            res = res / (i + 1);
+        for (int i = 1; i <= r; i++) {
+            res = res * n--;
+            res = res / i;
         }
 
         return res; // return the result
