@@ -12,7 +12,12 @@ public class h_RotateMatrixBy90 {
         System.out.println("Rotated Image:");
         System.out.println(Arrays.deepToString(arr));
     }
+/*
+Complexity Analysis -
+Time Complexity: O(N^2) +O(N^2), to linearly iterate and find transpose of the matrix and another O(N^2) to find the reverse of each row.
 
+Space Complexity: O(1), as no extra space is being used.
+ */
     public static void rotateMatrix(int[][] matrix) {
         int n = matrix.length;
 
