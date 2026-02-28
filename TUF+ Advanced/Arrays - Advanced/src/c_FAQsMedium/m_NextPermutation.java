@@ -15,6 +15,15 @@ public class m_NextPermutation {
         System.out.print("\nNext Permutation: ");
         for(int x : nums) System.out.print(x + " ");
     }
+/*
+Brute force solution - will result in time limit exceeded
+Complexity Analysis -
+Time Complexity: O(N × N!), where N is the size of the input array.
+Generating all permutations involves exploring N! arrangements, and each permutation requires O(N) time to construct, resulting in O(N × N!). Although sorting the permutations and performing a linear search add to the total time, the dominant factor remains O(N × N!) due to the exponential nature of permutation generation.
+
+Space Complexity: O(N × N!)
+Recursion stack takes up to O(N) space, and storing all permutations requires O(N × N!) space.
+ */
 
     public static void nextPermutation(int[] nums) {
         int n = nums.length; // Size of the given array
