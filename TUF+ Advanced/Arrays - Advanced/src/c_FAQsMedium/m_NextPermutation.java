@@ -16,13 +16,14 @@ public class m_NextPermutation {
         for(int x : nums) System.out.print(x + " ");
     }
 /*
-Brute force solution - will result in time limit exceeded
-Complexity Analysis -
-Time Complexity: O(N × N!), where N is the size of the input array.
-Generating all permutations involves exploring N! arrangements, and each permutation requires O(N) time to construct, resulting in O(N × N!). Although sorting the permutations and performing a linear search add to the total time, the dominant factor remains O(N × N!) due to the exponential nature of permutation generation.
+Optimal Solution
 
-Space Complexity: O(N × N!)
-Recursion stack takes up to O(N) space, and storing all permutations requires O(N × N!) space.
+Complexity Analysis-
+
+Time Complexity: O(N), where N is the size of the input array.
+Finding the pivot takes O(N) time. Finding the next greater element also takes O(N) in the worst case. And, reversing the subarray takes O(N). All this adds up to a total of O(N) time complexity.
+
+Space Complexity: O(1), as the modification is done in-place and no extra data structure was used apart from a few variables.
  */
 
     public static void nextPermutation(int[] nums) {
@@ -73,4 +74,5 @@ Recursion stack takes up to O(N) space, and storing all permutations requires O(
             end--;
         }
     }
+
 }
